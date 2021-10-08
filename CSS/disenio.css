@@ -14,7 +14,7 @@ a:hover {
 }
 
 body {
-    font-family: 'Noto Sans JP', sans-serif;	
+  font-family: 'Noto Sans JP', sans-serif;	
 	background: #f2f2f2;
 }
 
@@ -26,6 +26,7 @@ body {
 	background: #FFCD48;
 	position: sticky;
 	top:0;
+	width: 100%;
 }
 
 .navbar a {
@@ -57,15 +58,16 @@ body {
 /* * ============================== */
 
 .contenedor-imagen {
-	height: 8x0vh;
+	height: auto;
 }
 
 .contenedor-imagen img {
 	width: 100%;
-	height: 400px;
+	height: 350px;
 	vertical-align: top;
 	object-fit: cover;
 	object-position: 0 bottom;
+	margin-bottom: 20px;
 }
 
 
@@ -99,15 +101,6 @@ main .contenido .fecha {
 /* * ============ ASIDE =========== */
 /* * ============================== */
 
-.lateral{
-	width: 30%;
-	height: 100px;
-	float: left;
-	margin: 5px;
-	padding: 10px;
-	/* background-color: black; */
-
-}
 
 .imglateral{
 	/* float: left; */
@@ -141,17 +134,6 @@ aside .indice  {
 	color: #FFCD48;
 }
 
-/* aside {
-	
-	min-width: 30%;
-	margin: 40px 20px 20px 0;
-	height: 100%;
-	background: #1D2F3D;
-	padding: 20px;
-	border-radius: 3px;
-	
-} */
-
 .divTitulo{
 	position: sticky;
 	bottom: 0;
@@ -163,18 +145,19 @@ aside .indice  {
 }
 
 #tituloP {
-  vertical-align: auto;
 	text-align:center ;
-	margin: 20px;
+	margin: 10px;
 }
 
 
 #tbl{
 	border-radius: 10px;
-	margin: 10px;
+	margin-top: 20px;
 	width: 65%;
 	float: right;
 	text-align: left;
+	border-radius: 1rem;
+	height: 40%; ;
 }
 
 
@@ -184,18 +167,20 @@ aside .indice  {
 
 #resultado{
 	padding: 10px;
-	width: 70%;
-	margin:10 10 10 10 ;
-	float: right;
+	width: 90%;
+	margin:10px;
+	/* float:	center; */
 	margin-bottom: 5px;
 }
 
 .divData{
 	align-content: center;
-	width: 70%;
+	width: 30%;
 	padding: 10px;
-	margin:10 10 10 10;
-	float: right;
+	margin:10px;
+	border-radius: 5px;
+	background: #1D2F3D;
+
 }
 
 /* aside .indice a {
@@ -215,10 +200,17 @@ footer .navbar{
 	width: 100%;
 }
 
+
+main{
+	padding-top: 1rem; 
+	display: block;
+}
+
+
 /* * ============================== */
 /* * ====== MEDIA QUERIES ========= */
 /* * ============================== */
-/* @media screen and (max-width: 900px){
+/* @media screen and (max-width: 1020px){
 	.navbar .contenedor {
 		flex-wrap: wrap;
 		margin: 0;
@@ -226,18 +218,28 @@ footer .navbar{
 	}
 
 	.navbar a {
-		width: auto;
+		align-content: center;
+		width: 100%;
 		flex: 1;
 	}
 
 	.contenedor-imagen {
 		height: 50vh;
+		width:100% ;
+	}
+
+	.divTitulo{
+	margin: 150 0 50 0 ;
+
 	}
 
 	#blog .contenedor {
 		flex-direction: column;
 	}
+} */
+button{
+	width: 100%;
 }
- */
-
-/* lateral */
+.comentario{
+color: #BDC3C7;
+}

@@ -20,30 +20,7 @@
 </head>
 
 <body>
-
-  <!-- titulo -->
-  <div class="divTitulo">
-    <h1 id="tituloP">Hoteleria - Habitaciones.</h1>
-  </div>
-
-
-    <!-- contenido -->
-    <div id="resultado" class="tbl">
-      <button class="btn btn-info" onclick="traerinformacion()"> Consultar Registros </button>
-    </div>
-
-    <div class="divData">
-      <input type="number" id="id" placeholder="id"> <br>
-      <input type="text" id="room" placeholder="Room"> <br>
-      <input type="number" id="stars" placeholder="Stars"> <br>
-      <input type="number" id="category_id" placeholder="Category"> <br>
-      <input type="text" id="description" placeholder="Descropcion"> <br>
-      <!-- Botones -->
-      <button class="btn btn-success" onclick="guardarinformacion()"> Guardar datos </button>
-      <button class="btn btn-outline-info" onclick="editarInformacion()"> Actulizar </button>
-    </div>
-
-  <footer>
+  <header>
     <nav class="navbar">
       <div class="contenedor">
         <!-- Menu de navegacion -->
@@ -54,8 +31,73 @@
         <a href="#">Soporte</a>
       </div>
     </nav>
-  </footer>
+  </header>
 
+  <!-- titulo -->
+  <div class="divTitulo">
+    <h1 id="tituloP"> Habitaciones </h1>
+  </div>
+
+  <!-- seccion -->
+  <section>
+    <article>
+      <!-- contenido -->
+      <div id="resultado" class="tbl">
+        <br>
+        <button id="btnConsultar" class="btn btn-dark" onclick="traerinformacion()"> Consultar Registros </button>
+      </div>
+
+      <div class="divData">
+        <label class="comentario"> El campo Id no es obligatorio ya que se genera automaticamente </label> <br> <br>
+        <div class="form-floating mb-1">
+          <input id="id" type="number" class="form-control" placeholder="Id" required>
+          <label for="floatingInput"> Id: </label>
+        </div>
+        <div class="form-floating mb-1">
+          <input id="room" type="text" class="form-control" placeholder="Habitacion:">
+          <label for="floatingPassword">Habitacion: *</label>
+        </div>
+        <div class="form-floating mb-1">
+          <input id="stars" type="number" class="form-control" placeholder="Stars" required>
+          <label for="floatingInput"> Stars: * </label>
+        </div>
+        <div class="form-floating mb-1">
+          <input id="category_id" type="number" class="form-control" placeholder="Categoria:">
+          <label for="floatingPassword">Categoria: *</label>
+        </div>
+        <div class="form-floating mb-4">
+          <input id="description" type="text" class="form-control" placeholder="Id" required>
+          <label for="floatingInput"> Descripción: *</label>
+        </div>
+        <!-- Botones -->
+        <div class="form-floating mb-2 ">
+          <button id="btnGuardar" class='btn btn-info'  onclick="guardarinformacion()"> Guardar datos </button><br>
+        </div>
+        <div class="form-floating mb-2">
+          <button id="btnActualizar"  class="btn btn-light" class="btnPanel" onclick="editarInformacion()" disabled>
+            Actualizar
+            Registro </button> <br>
+        </div>
+        <div class="form-floating mb-2">
+          <button id="btnCancelar" class="btn btn-danger" onclick="cancelar()"> Cancelar </button><br> <br>
+        </div>
+
+
+        <!-- anterior -->
+        <!--   <label class="col-md-1"> Id: </label>
+        <input class="form-label" type="number" class="form-control" id="id" placeholder="id" required> <br>
+        <input type="text" id="room" placeholder="Room" required> <br>
+        <input type="number" id="stars" placeholder="Stars" required> <br>
+        <input type="number" id="category_id" placeholder="Category" required> <br>
+        <input type="text" id="description" placeholder="Descropcion" required> <br> <br> -->
+        <!-- Botones -->
+        <!--   <button id="btnGuardar" class="btn btn-success" onclick="guardarinformacion()"> Guardar datos </button><br>
+        <button id="btnActualizar" class="btn btn-outline-info" onclick="editarInformacion()" disabled> Actulizar
+          Registro </button> <br>
+        <button id="btnCancelar" class="btn btn-danger" onclick="cancelar()"> Cancelar </button><br> <br> -->
+      </div>
+    </article>
+  </section>
 </body>
 
 </html>

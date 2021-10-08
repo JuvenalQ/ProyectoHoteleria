@@ -23,28 +23,8 @@
 </head>
 
 <body>
-  <!-- titulo -->
-  <div class="divTitulo">
-    <h1 id="tituloP"> Hoteleria - Clientes </h1>
-  </div>
 
-  <!-- contenido -->
-  <div id="resultado" class="tbl">
-    <button class="btn btn-info" onclick="traerInformacionCliente()"> Consultar Clientes </button>
-  </div>
-
-  <!-- Formulario para ingresar clientes -->
-  <div class="divData">
-    <input type="number" id="id" placeholder="id"> <br>
-    <input type="text" id="name" placeholder="Nombre"> <br>
-    <input type="text" id="email" placeholder="Email"> <br>
-    <input type="number" id="age" placeholder="Edad"> <br>
-    <!-- Botones -->
-    <button class="btn btn-success" onclick="guardarInformacionCliente()"> Guardar Cliente </button>
-    <button class="btn btn-outline-info" onclick="editarInformacionCliente()"> Actulizar </button>
-  </div>
-
-  <footer>
+  <header>
     <nav class="navbar">
       <div class="contenedor">
         <!-- Menu de navegacion -->
@@ -55,7 +35,67 @@
         <a href="#">Soporte</a>
       </div>
     </nav>
-  </footer>
+  </header>
+
+  <!-- titulo -->
+  <div class="divTitulo">
+    <h1 id="tituloP"> Hoteleria - Clientes </h1>
+  </div>
+
+  <!-- Formulario para ingresar clientes -->
+  <!-- <div class="divData">
+    <input type="number" id="id" placeholder="id"> <br>
+    <input type="text" id="name" placeholder="Nombre"> <br>
+    <input type="email" id="email" placeholder="Email"> <br>
+    <input type="number" id="age" placeholder="Edad"> <br>
+    <button class="btn btn-success" onclick="guardarInformacionCliente()"> Guardar Cliente </button>
+    <button class="btn btn-outline-info" onclick="editarInformacionCliente()"> Actulizar </button>
+  </div> -->
+
+  <!-- seccion -->
+  <section>
+    <article>
+      <!-- contenido -->
+      <div id="resultado" class="tbl">
+        <br>
+        <button id="btnConsultarClientes" class="btn btn-dark" onclick="traerInformacionCliente()"> Consultar Registros
+        </button>
+      </div>
+
+      <div class="divData">
+        <label class="comentario"> El campo Id no es obligatorio ya que se genera automaticamente </label> <br> <br>
+        <div class="form-floating mb-1">
+          <input id="id" type="number" class="form-control" placeholder="Id" required>
+          <label for="floatingInput"> Id: </label>
+        </div>
+        <div class="form-floating mb-1">
+          <input type="text" id="name" class="form-control" placeholder="Nombre:">
+          <label for="floatingPassword">Nombre: *</label>
+        </div>
+        <div class="form-floating mb-1">
+          <input type="email" id="email" class="form-control" placeholder="Email" required>
+          <label for="floatingInput"> Email: * </label>
+        </div>
+        <div class="form-floating mb-1">
+          <input type="number" id="age" class="form-control" placeholder="Edad: ">
+          <label for="floatingPassword">Edad: *</label>
+        </div>
+
+
+        <!-- Botones -->
+        <div class="form-floating mb-2 ">
+          <button id="btnGuardarCliente" class="btn btn-info" onclick="guardarInformacionCliente()"> Guardar Cliente
+          </button>
+        </div>
+        <div class="form-floating mb-2">
+          <button id="IdActualizarCliente" class="btn btn-light" onclick="editarInformacionCliente()" disabled>
+            Actulizar Cliente</button>
+        </div>
+        <div class="form-floating mb-2">
+          <button id="btnCancelar" class="btn btn-danger" onclick="cancelar()"> Cancelar </button><br> <br>
+        </div>
+    </article>
+  </section>
 </body>
 
 </html>

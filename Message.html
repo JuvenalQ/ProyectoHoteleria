@@ -23,27 +23,8 @@
 </head>
 
 <body>
-  <!-- titulo -->
-  <div class="divTitulo">
-    <h1 id="tituloP"> Hoteleria - Mensages </h1>
-  </div>
 
-  <!-- contenido -->
-  <div id="resultado" class="tbl">
-    <button class="btn btn-info" onclick="traerInformacionMessage()"> Consultar Mensajes </button>
-  </div>
-
-  <!-- Formulario para ingresar clientes -->
-  <div class="divData">
-    <input type="number" id="id" placeholder="id"> <br>
-    <input type="text" id="messagetext" placeholder="Mensaje"> <br> <br>
-
-    <!-- Botones -->
-    <button class="btn btn-success" onclick="guardarInformacionMessage()"> Guardar Mensage </button>
-    <button class="btn btn-outline-info" onclick="editarInformacionMessage()"> Actulizar </button>
-  </div>
-
-  <footer>
+  <header>
     <nav class="navbar">
       <div class="contenedor">
         <!-- Menu de navegacion -->
@@ -54,7 +35,63 @@
         <a href="#">Soporte</a>
       </div>
     </nav>
-  </footer>
+  </header>
+
+  <!-- titulo -->
+  <div class="divTitulo">
+    <h1 id="tituloP"> Mensages </h1>
+  </div>
+
+  <!-- contenido -->
+  <!-- <div id="resultado" class="tbl">
+    <button class="btn btn-info" onclick="traerInformacionMessage()"> Consultar Mensajes </button>
+  </div> -->
+
+  <!-- Formulario para ingresar clientes -->
+  <!--  <div class="divData">
+    <input type="number" id="id" placeholder="id"> <br>
+    <input type="text" id="messagetext" placeholder="Mensaje"> <br> <br>
+
+    <button class="btn btn-success" onclick="guardarInformacionMessage()"> Guardar Mensage </button>
+    <button class="btn btn-outline-info" onclick="editarInformacionMessage()"> Actulizar </button>
+  </div> -->
+
+  <section>
+    <article>
+      <!-- contenido -->
+      <div id="resultado" class="tbl">
+        <br>
+        <button id="btnConsultarMessage" class="btn btn-dark" onclick="traerInformacionMessage()"> Consultar Mensajes
+        </button>
+      </div>
+
+      <!-- Formulario -->
+      <div class="divData">
+        <label class="comentario"> El campo Id no es obligatorio ya que se genera automaticamente </label> <br> <br>
+        <div class="form-floating mb-1">
+          <input id="id" type="number" class="form-control" placeholder="Id" required>
+          <label for="floatingInput"> Id: </label>
+        </div>
+        <div class="form-floating mb-1">
+          <textarea id="messagetext" class="form-control" placeholder="Mensaje"></textarea>
+          <label for="floatingTextarea">Mensaje: *</label>
+        </div>
+
+        <!-- Botones -->
+        <div class="form-floating mb-2 ">
+          <button id="btnGuardarMessage" class="btn btn-info" onclick="guardarInformacionMessage()"> Guardar Mensaje
+          </button>
+        </div>
+        <div class="form-floating mb-2">
+          <button id="btnActualizarCliente" class="btn btn-light" onclick="editarInformacionMessage()" disabled>
+            Actulizar Mensaje</button>
+        </div>
+        <div class="form-floating mb-2">
+          <button id="btnCancelar" class="btn btn-danger" onclick="cancelar()"> Cancelar </button><br> <br>
+        </div>
+    </article>
+  </section>
+
 </body>
 
 </html>
