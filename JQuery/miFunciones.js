@@ -21,7 +21,7 @@ function traerinformacion() {
       }
     },
     complete: function (xhr, status) {
-      console.log('Petición realizada(Consultar Habitaciones), ' + xhr.status);
+      console.log('Petición realizada(Consultar Habitaciones paty y jostin), ' + xhr.status);
     },
     error: function (xhr, status) {
       alert('Ups Ocurrio un problema , ' + xhr.status);
@@ -35,7 +35,6 @@ function pintarRespuesta(items) {
   //desactivo el boton de actulizar registro
   $("#btnActualizar").hide();
   $("#btnConsultar").hide();
-
 
   let myTable = "<table id='tbl' class='table table-dark table-striped'>";
   myTable += "<tr class='table-dark'>";
@@ -64,6 +63,7 @@ function pintarRespuesta(items) {
 }
 
 //url: "https://g39b406ee3fdd9f-bbddhoteleria.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/room/room?Id=" + item,
+
 function editarInformacionForId(id) {
 
   alert("registro a actualizar #: " + id);
@@ -74,8 +74,10 @@ function editarInformacionForId(id) {
     type: "GET",
     datatype: "JSON",
     success: function (habitacion) { //Obtengo en un array los datos de la habitacion
-      let item = habitacion.items[0]; //Guardo en una variable el array 
 
+      // Comentare esta parte porque no me trar la informacion que necesito 
+      let item = habitacion.items[0]; //Guardo en una variable el array 
+      console.log("este es id: " + id); 
       // inhabilitamos el boton guardar datos  para ingresar
       $("#btnGuardar").prop('disabled', true);
       $("#btnGuardar").hide();
@@ -84,14 +86,15 @@ function editarInformacionForId(id) {
       $("#btnActualizar").prop('disabled', false);
       $("#btnActualizar").show();
 
-      console.log("Traemos informacion de la habitacion " + item.id); 
+      console.log("Traemos informacion de la habitacion " + item.id);
       //Obtengo cada item del array en su campo
-      $("#id").val(item.id);
-      $("#id").prop('readonly', true);
-      $("#room").val(item.room);
-      $("#stars").val(item.stars);
-      $("#category_id").val(item.category_id);
-      $("#description").val(item.description);
+      $("#id").val(id);
+      $("#id").prop('readonly', true); // descativamos la propiedad de modificar el Id 
+      //$("#room").val(item.room);
+      //$("#stars").val(item.stars);
+      //$("#category_id").val(item.category_id);
+      //$("#description").val(item.description);
+      //$("#description").val(" ");
     },
     complete: function (xhr, status) {
       console.log('Petición realizada(Consultar id Habitacion), ' + xhr.status);
@@ -314,11 +317,11 @@ function editarInformacionForIdCliente(id) {
       $("#IdActualizarCliente").show();
 
       //Obtengo cada item del array en su campo
-      $("#id").val(item.id);
+      $("#id").val(id);
       $("#id").prop('readonly', true);
-      $("#name").val(item.name);
-      $("#email").val(item.email);
-      $("#age").val(item.age);
+      //$("#name").val(item.name);
+      //$("#email").val(item.email);
+      //$("#age").val(item.age);
     },
     complete: function (xhr, status) {
       console.log('Petición realizada(Consultar id cliente), ' + xhr.status);
@@ -527,9 +530,9 @@ function editarInformacionForIdMessage(id) {
       $("#btnActualizarCliente").show();
 
       //Obtengo cada item del array en su campo
-      $("#id").val(item.id);
-      $("#id").prop('readonly', true);
-      $("#messagetext").val(item.messagetext);
+      $("#id").val(id);
+      //$("#id").prop('readonly', true);
+      //$("#messagetext").val(item.messagetext);
     },
     complete: function (xhr, status) {
       console.log('Petición realizada(Consultar id Message), ' + xhr.status);
